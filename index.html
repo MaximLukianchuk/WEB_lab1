@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="main.css">
+    <title>SmartQ</title>
+</head>
+<body>
+    <header class="header">
+        <div class="main-wrapper">
+            <a href="#"><img class="main-logo" src="static/logo.png" alt="логотип"></a>
+            <nav class="main-menu">
+                <ul class="menu-items">
+                    <li class="menu-item"><a href="#opportunities-section">Возможности</a></li>
+                    <li class="menu-item"><a href="#price-section">Сколько это стоит</a></li>
+                    <li class="menu-item"><a href="#team-section">Команда</a></li>
+                    <li class="menu-item"><a href="#contact-section">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="main-section" id="main-section">
+            <div class="main-wrapper">
+                <div class="main-section__left-panel">
+                    <h1 class="main-section__heading">Лучший сервис для экономии времени в очередях</h1>
+                    <p class="main-section__subheading">Вам больше не нужно тратить драгоценное время на простаивание в очередях. Мы сделаем это за вас!</p>
+                    <a class="main-section__link" href="#">альфа-версия</a>
+                </div>
+            </div>
+        </section>
+        <section class="opportunities" id="opportunities-section">
+            <div class="main-wrapper">
+                <h2 class="opportunities__heading section__heading">Возможности</h2>
+                <div class="opportunities__cards">
+                    <div class="cards-item">
+                        <div class="cards-item__image-wrapper">
+                            <img class="cards-item__image" src="static/sms.png" alt="значок смски"/>
+                        </div>
+                        <h2 class="cards-item__header">
+                            Уведомления
+                        </h2>
+                        <p class="cards-item__content">
+                            Получайте уведомления о вашем месте в очереди с прогнозированием оставшегося времени.
+                        </p>
+                        <a class="cards-item__link" href="#">Читать далее</a>
+                    </div>
+                    <div class="cards-item">
+                        <div class="cards-item__image-wrapper">
+                            <img class="cards-item__image" src="static/map.png" alt="значок карты"/>
+                        </div>
+                        <h2 class="cards-item__header">
+                            Карта
+                        </h2>
+                        <p class="cards-item__content">
+                            Вы можете не беспокоиться, что забудете где стояли, а мы не забуем Вас предупредить,
+                            если будет подходить ваша очередь, а вы будете далеко.
+                        </p>
+                        <a class="cards-item__link" href="#">Читать далее</a>
+                    </div>
+                    <div class="cards-item">
+                        <div class="cards-item__image-wrapper">
+                            <img class="cards-item__image" src="static/remote.png" alt="значок кровати"/>
+                        </div>
+                        <h2 class="cards-item__header">
+                            Удаленность
+                        </h2>
+                        <p class="cards-item__content">
+                            Вставайте в очередь не вставая с кровати!
+                            Все что нужно - это перейти по ссылке или навести камеру своего смартфона на QR-код.
+                        </p>
+                        <a class="cards-item__link" href="#">Читать далее</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="price" id="price-section">
+            <div class="main-wrapper">
+                <h2 class="price__heading section__heading">Сколько это стоит</h2>
+                <div class="main-wrapper">
+                    <h2 class="price__content">Это бесплатно!</h2>
+                </div>
+            </div>
+        </section>
+        <section class="team" id="team-section">
+            <div class="main-wrapper">
+                <h2 class="team__heading section__heading">Наша команда</h2>
+                <div class="team__cards">
+                    <div class="cards-item">
+                        <img class="cards-item__image" src="static/maximluk.jpeg" alt="фото разработчика"/>
+                        <h2 class="cards-item__name">Лукьянчук Максим</h2>
+                        <p class="cards-item__position">
+                            фулстек-разработчик
+                        </p>
+                    </div>
+                    <div class="cards-item">
+                        <img class="cards-item__image" src="static/mark.jpg" alt="фото разработчика"/>
+                        <h2 class="cards-item__name">Смирнов Марк</h2>
+                        <p class="cards-item__position">
+                            фулстек-разработчик
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact-section">
+            <div class="main-wrapper">
+                <div class="main-wrapper">
+                    <div class="form-container">
+                        <h2 class="form-container__header">Подписаться на новости</h2>
+                        <form class="form-container__form" action="">
+                            <input class="form__email-input" type="text" id="email" name="email" placeholder="Введите ваш email">
+                            <button class="form__submit-button" type="submit">Подписаться</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

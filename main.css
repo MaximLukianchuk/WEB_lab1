@@ -1,0 +1,396 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* TODO: разобраться, как можно делать подскролл к якорным ссылкам с приклееным хедером ( при подскролле прибавляется высота хедера ) */
+.header {
+    position: sticky;
+    top: 0;
+    height: 65px;
+    background-color: var(--biscay);
+    z-index: 10;
+}
+
+.main-wrapper {
+    margin: 0 auto;
+    width: 65%;
+}
+
+.header .main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.main-logo {
+ height: 40px;
+}
+
+.menu-item {
+    display: inline-block;
+}
+
+.main-menu .menu-item {
+    margin: 0 15px;
+}
+
+.main-menu .menu-item a {
+    position: relative;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+}
+
+.main-menu .menu-item a::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 5px;
+    background-color: var(--blue-curacao);
+    top: 20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.main-menu .menu-item a:hover::after {
+    width: 100%;
+    border-radius: 20px;
+    transition-duration: 0.3s;
+}
+
+.main-section {
+    position: relative;
+    height: 500px;
+    background: url('static/main.jpg') fixed;
+    background-size: cover;
+}
+
+.main-section:after {
+    position: absolute;
+    content: '';
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--biscay);
+    opacity: 0.5;
+}
+
+.main-section .main-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.main-section__left-panel {
+    width: 50%;
+}
+
+.main-section__heading {
+    position: relative;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 58px;
+    margin-bottom: 35px;
+    padding: 25px 0 0 30px;
+    color: var(--white);
+}
+
+.main-section__heading::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 135px;
+    height: 5px;
+    border-radius: 20px;
+    background-color: var(--blue-curacao);
+}
+
+.main-section__heading::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 135px;
+    border-radius: 20px;
+    background-color: var(--blue-curacao);
+}
+
+.main-section__subheading {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: var(--white);
+}
+
+.main-section__link {
+    display: flex;
+    width: 315px;
+    height: 50px;
+    border: 1px solid var(--blue-curacao);
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-section__link:hover {
+    background-color: var(--blue-curacao);
+    transition-duration: 0.3s;
+}
+
+.main-section__left-panel {
+    z-index: 1;
+}
+
+.section__heading {
+    display: inline;
+    position: relative;
+    color: var(--pencil-lead);
+    font-size: 30px;
+    z-index: 2;
+}
+
+.section__heading::after {
+    position: absolute;
+    content: '';
+    width: 65%;
+    top: 120%;
+    left: 50%;
+    margin-left: -31%;
+    height: 5px;
+    background-color: var(--pencil-lead);
+    z-index: 2;
+}
+
+.opportunities {
+    padding-top: 40px;
+}
+
+.opportunities .main-wrapper {
+    text-align: center;
+}
+
+.opportunities__cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 30px 0;
+    justify-content: space-between;
+}
+
+.opportunities__cards .cards-item {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.opportunities__cards .cards-item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.opportunities__cards .cards-item__image-wrapper {
+    display: flex;
+    height: 165px;
+}
+
+.opportunities__cards .cards-item__image-wrapper .cards-item__image {
+    width: 125px;
+    margin: auto;
+}
+
+.opportunities__cards .cards-item__header {
+    color: var(--pencil-lead);
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+
+.opportunities__cards .cards-item__link {
+    display: flex;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 110px;
+    height: 45px;
+    border: 1px solid var(--pencil-lead);
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+}
+
+.opportunities__cards .cards-item__link:hover {
+    background-color: var(--pencil-lead);
+    color: var(--white);
+    transition-duration: 0.3s;
+}
+
+.price {
+    padding-top: 40px;
+    position: relative;
+    height: 500px;
+    background: url('static/main.jpg') fixed;
+    background-size: cover;
+}
+
+.price:after {
+    position: absolute;
+    content: '';
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--biscay);
+    opacity: 0.5;
+}
+
+.price__heading {
+    color: var(--white);
+}
+
+.price__heading::after {
+    background-color: var(--white);
+}
+
+.price .main-wrapper {
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price .price__content {
+    position: relative;
+    margin-top: 170px;
+    font-size: 64px;
+    font-weight: 400;
+    color: var(--white);
+}
+
+.team {
+    padding-top: 40px;
+}
+
+.team .main-wrapper {
+    text-align: center;
+}
+
+.team__cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+.team__cards .cards-item {
+    position: relative;
+    width: 300px;
+    height: 330px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.team__cards .cards-item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.team__cards .cards-item__name {
+    color: var(--pencil-lead);
+    font-size: 25px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.team__cards .cards-item__position {
+    color: var(--pencil-lead);
+    font-size: 15px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.team__cards .cards-item__image {
+    width: 100%;
+    max-height: 250px;
+}
+
+.contact {
+    padding-top: 40px;
+    position: relative;
+    height: 500px;
+    background: url('static/main.jpg') fixed;
+    background-size: cover;
+}
+
+.contact:after {
+    position: absolute;
+    content: '';
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--biscay);
+    opacity: 0.5;
+}
+
+.contact__heading {
+    color: var(--white);
+}
+
+.contact__heading::after {
+    background-color: var(--white);
+}
+
+.contact .main-wrapper {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.contact .form-container__header {
+    margin: 15px 0;
+    color: var(--blue-curacao);
+    font-weight: 100;
+    text-align: center;
+}
+
+.contact .form-container__form {
+    display: flex;
+}
+
+.contact .form__email-input {
+    background-color: transparent;
+    border: 1px solid var(--blue-curacao);
+    width: 400px;
+    color: white
+}
+
+.contact .form__submit-button {
+    border: 1px solid var(--blue-curacao);
+    background-color: var(--blue-curacao);
+    color: var(--white);
+}
